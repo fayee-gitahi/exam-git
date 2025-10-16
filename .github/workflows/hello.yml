@@ -1,0 +1,14 @@
+name: Hello GitHub
+ 
+on:
+  push:
+    branches:
+      - master  # runs whenever you push to master
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+ 
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello GitHub Actions"
